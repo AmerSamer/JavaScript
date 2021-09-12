@@ -46,7 +46,7 @@ vvv = 'He`s got it! ' + vvv;
 let bill = 100;
 const tax = 0.16;
 let total = bill + bill * tax;
-console.log('Your total bill is:', total, '$.');
+console.log('Your total bill is:', total,'$.');
 // Round the number 50.6 to its nearest integer
 console.log(Math.round(50.6));
 //Create a variable that is undefined
