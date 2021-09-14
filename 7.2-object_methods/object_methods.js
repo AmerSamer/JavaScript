@@ -10,7 +10,8 @@ const mycountry = {
             ', they have ' + this.neighbours.length + ' neighbouring countries and a capital called ' + this.capital;
         return msg;
     },
-    checkIsland: function () {
+    checkIsland: function (ageToCompare) {
+        // return this.isIsland = ageToCompare == this.neighbours.length ? true : false
         if(this.neighbours.length != 0){
             isIsland= false;
         }else{
@@ -19,7 +20,6 @@ const mycountry = {
         return isIsland;
     }
 }
-
 
 console.log(mycountry.describe());
 console.log(mycountry.checkIsland());
