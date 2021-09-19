@@ -6,14 +6,14 @@
 
 function isString (str,callbackFunc){
     if(typeof str === 'string'){
-       return callbackFunc(str)
+       callbackFunc(str)
     }
 }
-function callbackFunc(string){
+function callback(string){
     console.log(string);
 }
 
-// isString('Joe', callbackFunc)
+isString('Joe', callback)
 
 // 2. Create a function called ‘firstWordUpperCase’ that
 // receives 2 arguments, a string and a callback function.
@@ -22,15 +22,11 @@ function callbackFunc(string){
 // dashes between the words.
 
 function firstWordUpperCase (str,callbackFunction){
-    str[0] = str[0].toUpperCase()
-    console.log(str);
-    callbackFunction(str)
+    str = (str.split(' ')[0].toUpperCase()) + ' ' + (str.split(' ').slice(1).join(' '))
+    console.log(callbackFunction(str));
+    
 }
 
-function callbackFunction(string){
-    string = string.replace(/\s+/g, '-');
-    console.log(string);
+const cbf = str=>str.split(' ').join('-')
 
-}
-
-firstWordUpperCase ('samer',callbackFunction)
+firstWordUpperCase ('Rachel Leonard Green',cbf)
