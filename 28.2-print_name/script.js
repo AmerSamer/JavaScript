@@ -7,16 +7,16 @@
 const obj = {
     name: 'Monica',
 
-    printName: function() {
+    printName: function(){
         console.log(this.name);
     },
 
-    printNameSecond: function () {
-        let name = this.name
-        setTimeout(function () {
-            console.log(name);
+    printNameSecond: function(){
+        setTimeout(() => {
+            console.log(this.name);
         }, 1000);
     }
+ 
 }
-obj.printName()
-obj.printNameSecond()
+obj.printName();
+obj.printNameSecond();
