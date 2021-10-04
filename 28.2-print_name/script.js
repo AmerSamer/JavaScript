@@ -18,5 +18,5 @@ const obj = {
     }
  
 }
-obj.printName();
-obj.printNameSecond();
+obj.printName()
+obj.printNameSecond()
