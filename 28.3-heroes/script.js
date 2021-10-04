@@ -23,4 +23,4 @@ function printHeroes(heroes, printFunc) {
     // heroes.map(ele => printFunc.apply(ele));
 }
 
-printHeroes(superHeroes,printName);
+printHeroes(superHeroes,printName)
