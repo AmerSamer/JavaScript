@@ -60,9 +60,11 @@ async function f1() {
     let x = await getIDs();
     console.log(x);
 
-    let all = await getRecipe(x[2])
+    let all = await getRecipe(x[12])
     console.log(all);
 
 }
 
-f1();
+f1().catch((err)=>{
+    console.log(err);
+})
