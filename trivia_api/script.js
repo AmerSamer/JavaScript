@@ -83,13 +83,11 @@ async function trivia() {
                 checker.style.background = "green"
                 checker.innerHTML = 'True'
                 dogg.innerHTML = `<img style="width: 200px; height: 200px;" src='${arrayDog[0].message}'>`
-
             } else {
                 checker.style.color = "white"
                 checker.style.background = "red"
                 checker.innerHTML = 'False'
                 dogg.innerHTML = `<img style="width: 200px; height: 200px;" src='${arrayDog[0].message}'>`
-
             }
             setTimeout(() => {
                 trivia()
