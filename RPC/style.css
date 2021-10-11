@@ -1,0 +1,59 @@
+body{
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.player{
+    border: olive 2px solid;
+    width: 100%;
+    height: 20vh;
+    /* margin: 1rem auto; */
+}
+.rock ,.scissors ,.paper {
+    /* border: rgb(24, 38, 165) 2px solid; */
+    /* width:30%; */
+    height: 8vh;
+
+    /* margin: 0.1rem auto; */
+}
+.rock:hover ,.scissors:hover ,.paper:hover {
+    /* border: rgb(24, 38, 165) 2px solid; */
+    color: green;
+    /* margin: 0.1rem auto; */
+}
+.board-game{
+    border: olive 2px solid;
+    width: 100%;
+    height: 10vh;
+    margin: 1rem auto;
+
+}
+.computerChoose{
+    border: olive 2px solid;
+    width: 100%;
+    height: 10vh;
+    margin: 1rem auto;
+
+}
+.total{
+    border: olive 2px solid;
+    width: 100%;
+    height: 10vh;
+    margin: 1rem auto;
+
+}
+.computer{
+    border: olive 2px solid;
+    width: 100%;
+    height: 20vh;
+    margin: 1rem auto;
+
+}
+.end{
+    border: olive 2px solid;
+    /* width: 100%;
+    height: 10vh; */
+    margin: 1rem auto;
+
+}
