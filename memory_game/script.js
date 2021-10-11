@@ -6,8 +6,8 @@ let arrayLeague = [['italy', false], ['italy', false], ['spain', false], ['spain
 ['germany', false], ['germany', false], ['france', false], ['france', false],
 ['england', false], ['england', false], ['portugal', false], ['portugal', false]]
 
-// const shuffledArray = arrayLeague.sort((a, b) => 0.5 - Math.random());
-const shuffledArray = arrayLeague
+const shuffledArray = arrayLeague.sort((a, b) => 0.5 - Math.random());
+// const shuffledArray = arrayLeague
 let WrongCounter = 0
 console.log(shuffledArray);
 let restart = document.querySelector('.restart')
