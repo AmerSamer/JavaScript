@@ -19,13 +19,21 @@ async function collectData() {
     console.log(booksArray);
 
     for (let i = 0; i < 10; i++) {
-        output += `<div>
-                    <img src="${booksArray[0].books[i].book_image}" alt="" style="height: 150px; width: 150px;">
-                    <div><span  style="color: silver; font-size: large;">Title:</span> <span style="color: white;">${booksArray[0].books[i].title}</span></div>
-                    <div><span  style="color: silver; font-size: large;">Author:</span> <span style="color: white;">${booksArray[0].books[i].author}</span></div>
-                    <div><span  style="color: silver; font-size: large;">Description:</span> <span style="color: white;">${booksArray[0].books[i].description}</span></div>
-               </div>`
+        output +=       `<article class="location-listing">
 
+                        <div class="location-title">
+                        <p><span style="text-decoration: underline; color: teal;">Title:</span> <p style="color: white;">${booksArray[0].books[i].title}</p></p>
+                        <p><span style="text-decoration: underline; color: teal;">Author:</span> <p style="color: white;">${booksArray[0].books[i].author}</p></p>
+                        <p><span style="text-decoration: underline; color: teal;">Description:</span> <p style="color: white;">${booksArray[0].books[i].description}</p></p>
+                        </div>
+                  
+                        <div class="location-image">
+                          <div>
+                              <img width="250" height="300" src="${booksArray[0].books[i].book_image}" alt="">    </div>
+                  
+                        </div>
+                  
+                      </article>`
     }
     parentt.innerHTML = output
 
@@ -43,4 +51,3 @@ async function collectData() {
     })
 };
 collectData()
-
