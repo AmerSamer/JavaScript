@@ -19,7 +19,7 @@ async function collectData() {
     console.log(booksArray);
 
     for (let i = 0; i < 10; i++) {
-        output +=       `<article class="location-listing">
+        output += `<article class="location-listing">
 
                         <div class="location-title">
                         <p><span style="text-decoration: underline; color: teal;">Title:</span> <p style="color: white;">${booksArray[0].books[i].title}</p></p>
@@ -38,16 +38,28 @@ async function collectData() {
     parentt.innerHTML = output
 
     searchIcon.addEventListener('click', () => {
-        // for (let i = 0 ; i < 10 ; i++) {
+        let counter = 0
         txt.innerHTML = ''
-        if ((booksArray[0].books[0].title != searchh.value.toUpperCase())
-            && (booksArray[0].books[0].author.toLowerCase() != searchh.value.toLowerCase())) {
-            console.log("no results");
-            txt.innerHTML = `no results. <br> Please try again`
-        } else {
-
+        for (let i = 0; i < 10; i++) {
+            if ((booksArray[0].books[i].title == searchh.value.toUpperCase())
+                || (booksArray[0].books[i].author.toLowerCase() == searchh.value.toLowerCase())) {
+                txt.innerHTML = `<div><img width="250" height="300" src="${booksArray[0].books[i].book_image}" alt="">
+                <div><span style="text-decoration: underline; color: teal;">Title:</span> <p style="color: white;">${booksArray[0].books[i].title}</p></div>
+                <div><span style="text-decoration: underline; color: teal;">Author:</span> <p style="color: white;">${booksArray[0].books[i].author}</p></div>
+                <div><span style="text-decoration: underline; color: teal;">Description:</span> <p style="color: white;">${booksArray[0].books[i].description}</p></div>
+                </div>`
+                console.log('1');
+            }
         }
-        // }
+        for (let i = 0; i < 10; i++) {
+            if ((booksArray[0].books[i].title != searchh.value.toUpperCase())
+                && (booksArray[0].books[i].author.toLowerCase() != searchh.value.toLowerCase())) {
+                counter++
+            }
+            if (counter == 10) {
+                txt.innerHTML = `no results. <br> Please Try Again Later`
+            }
+        }
     })
 };
 collectData()
